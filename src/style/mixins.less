@@ -1,0 +1,30 @@
+@import './variables';
+
+.mixin-shade() {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.mixin-defaultButton(@color) {
+  border: 1px solid @color;
+  color: @color;
+  background: #fff;
+  transition: all 0.6s;
+  border-radius: 4px;
+  &:hover {
+    background: @color;
+    color: #fff;
+  }
+}
+
+.mixin-greenButton() {
+  .mixin-defaultButton(@green1);
+}
+
+.mixin-orangeButton() {
+  .mixin-defaultButton(@orange);
+}
