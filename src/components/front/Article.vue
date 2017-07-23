@@ -28,13 +28,14 @@ export default {
   computed: mapState({
     article: state => {
       state.article.content = marked(state.article.content || '');
-console.log(state.article);
+
       return state.article;
     }
   }),
   methods: {
     fetchData() {
-
+      // this.$store.dispatch('getArticle', this.$route.params.id);
+      this.$store.dispatch('getArticle', { title: 'RequireJs' });
     },
     highlight() {
 
